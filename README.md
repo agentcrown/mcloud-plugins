@@ -20,7 +20,7 @@
 
 1. 同样先设置环境变量 `MCLOUD_API_KEY`。
 2. 把 [`codex/config.toml`](codex/config.toml) 的内容追加到 `~/.codex/config.toml`。
-3. 把 [`generic/skills`](generic/skills) 里的两个文件夹复制到 Codex 的 skills 目录。
+3. 把 [`generic/skills`](generic/skills) 里的两个文件夹复制到 `~/.agents/skills/`（Windows 是 `C:\Users\你的用户名\.agents\skills\`），这是 Codex 的个人 Skill 目录。
 
 ## Cursor、OpenClaw 等其他支持 MCP 的工具
 
@@ -32,6 +32,11 @@
 装好后，在对话里问：
 
 > 新加坡 4 核 16G 的服务器，哪家云最便宜？
+
+## 连不上怎么办
+
+- **显示 "Failed to connect … HTTP 401"**：key 没设置或设置错了。检查环境变量 `MCLOUD_API_KEY`；Windows 用 `setx` 设置后，要**重新打开终端和 Claude / Codex** 才会生效。
+- key 确认无误仍然连不上，请联系客户经理重新发一把。
 
 ## 说明
 
@@ -47,8 +52,10 @@ Compare Singapore server prices across AWS, Azure, Google Cloud, Alibaba Cloud, 
 **Claude Code:** set the `MCLOUD_API_KEY` environment variable, then run
 `/plugin marketplace add agentcrown/mcloud-plugins` and `/plugin install mcloud@mcloud`.
 
-**Codex:** set `MCLOUD_API_KEY`, append [`codex/config.toml`](codex/config.toml) to `~/.codex/config.toml`, and copy [`generic/skills`](generic/skills) into your Codex skills folder.
+**Codex:** set `MCLOUD_API_KEY`, append [`codex/config.toml`](codex/config.toml) to `~/.codex/config.toml`, and copy the folders in [`generic/skills`](generic/skills) into `~/.agents/skills/`.
 
 **Other MCP clients:** import [`generic/mcp.json`](generic/mcp.json) with your key filled in.
+
+"Failed to connect … HTTP 401" means the key is missing or wrong; after `setx` on Windows, restart your terminal and AI tool.
 
 Quotes are indicative, exclude taxes, public IPs and support, are valid for 7 days, and are final only under contract.
