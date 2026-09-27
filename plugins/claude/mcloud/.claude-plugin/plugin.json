@@ -1,0 +1,6 @@
+{
+  "name": "mcloud",
+  "version": "0.1.0",
+  "description": "Compare and quote servers across AWS, GCP, Azure, Alibaba, Tencent and Huawei Cloud in Singapore",
+  "author": { "name": "AgentCrown" }
+}

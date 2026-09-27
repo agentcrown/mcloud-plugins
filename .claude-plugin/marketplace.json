@@ -1,0 +1,13 @@
+{
+  "name": "mcloud",
+  "owner": { "name": "AgentCrown" },
+  "metadata": { "description": "Multi-cloud Singapore pricing and quotes" },
+  "plugins": [
+    {
+      "name": "mcloud",
+      "source": "./plugins/claude/mcloud",
+      "description": "Compare and quote servers across AWS, GCP, Azure, Alibaba, Tencent and Huawei Cloud in Singapore",
+      "version": "0.1.0"
+    }
+  ]
+}

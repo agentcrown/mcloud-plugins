@@ -1,0 +1,5 @@
+# Append to ~/.codex/config.toml, then set MCLOUD_API_KEY in your environment.
+# Copy the skills/ folders into your Codex skills directory (see README).
+[mcp_servers.mcloud]
+url = "https://mcp.agentcrown.ai/mcp"
+bearer_token_env_var = "MCLOUD_API_KEY"

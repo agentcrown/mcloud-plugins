@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "mcloud": {
+      "type": "http",
+      "url": "https://mcp.agentcrown.ai/mcp",
+      "headers": { "Authorization": "Bearer ${MCLOUD_API_KEY}" }
+    }
+  }
+}
