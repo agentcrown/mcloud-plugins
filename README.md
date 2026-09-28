@@ -1,6 +1,11 @@
 # mcloud · AgentCrown 新加坡多云比价
 
-在你的 AI 工具里直接比较 **AWS、Azure、Google Cloud、阿里云、腾讯云、华为云** 新加坡区域的服务器价格。价格显示刊例价、你的专属折扣和折后价，并能生成报价单、提交购买意向。
+在你的 AI 工具里直接比较 **AWS、Azure、Google Cloud、阿里云、腾讯云、华为云** 的价格，全部显示刊例价、你的专属折扣和折后价：
+
+- **云服务器**：新加坡区域各家机型比价，生成报价单、提交购买意向
+- **GPU 算力**：H100、H200、A100、L40S、L4、T4 等，覆盖新加坡及雅加达、东京、孟买、香港、曼谷，显示每卡价格和有没有货
+- **大模型 API**：Claude 等模型通过各家云购买的价格，按月用量估算费用，并区分数据是否留在本地区
+- **账单分析**：通过我们购买的云，查看你自己的月度费用和省钱建议（需客户经理开通）
 
 使用前需要一把 **API key**，请向你的 AgentCrown 客户经理索取。**key 只属于你一个人，请不要分享给他人。**
 
@@ -39,6 +44,12 @@
 
 > 新加坡 4 核 16G 的服务器，哪家云最便宜？
 
+> 我要 8 卡 H100 做训练，东南亚哪里有、每月多少钱？
+
+> 每月 1 亿输入、2 千万输出 token，用 Claude Sonnet 走哪家云最便宜？数据不能出新加坡。
+
+> 我上个月的云费用是多少？有什么能省钱的？
+
 ## 连不上怎么办
 
 - **显示 "Failed to connect … HTTP 401"**：key 没设置或设置错了。检查环境变量 `MCLOUD_API_KEY`；Windows 用 `setx` 设置后，要**重新打开终端和 Claude / Codex** 才会生效。
@@ -48,12 +59,14 @@
 
 - 报价为参考价，不含税、公网 IP 和技术支持费，有效期 7 天，**最终价格以合同为准**。
 - 提交购买意向后，你的客户经理会在一个工作日内联系你。本服务不会替你开通或删除任何云资源。
+- GPU 库存变化很快，下单前由客户经理确认；购买 GPU 需要提供最终用户、母公司、所在国家和用途，用于出口管制审查。
+- 大模型价格中的"全局"渠道，请求可能在其他国家处理；有数据驻留要求请选择"区域内"渠道。
 
 ---
 
 ## English
 
-Compare Singapore server prices across AWS, Azure, Google Cloud, Alibaba Cloud, Tencent Cloud and Huawei Cloud from your AI tool: list price, your discount and final price, quotes, and purchase requests. You need an API key from your AgentCrown account manager.
+Compare prices across AWS, Azure, Google Cloud, Alibaba Cloud, Tencent Cloud and Huawei Cloud from your AI tool, always as list price, your discount and final price: Singapore servers (quotes and purchase requests), GPU servers in Singapore and nearby APAC regions (price per GPU and stock), AI model APIs bought through the clouds (monthly estimates, regional vs global processing), and your own bills with savings suggestions. You need an API key from your AgentCrown account manager.
 
 **Claude Code:** set the `MCLOUD_API_KEY` environment variable, then run
 `/plugin marketplace add agentcrown/mcloud-plugins` and `/plugin install mcloud@mcloud`.
@@ -64,4 +77,4 @@ Compare Singapore server prices across AWS, Azure, Google Cloud, Alibaba Cloud, 
 
 "Failed to connect … HTTP 401" means the key is missing or wrong; after `setx` on Windows, restart your terminal and AI tool.
 
-Quotes are indicative, exclude taxes, public IPs and support, are valid for 7 days, and are final only under contract.
+Quotes are indicative, exclude taxes, public IPs and support, are valid for 7 days, and are final only under contract. GPU availability is confirmed by your account manager, and GPU orders need end-user details for export-control screening.
