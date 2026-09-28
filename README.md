@@ -20,18 +20,18 @@
 
 1. 同样先设置环境变量 `MCLOUD_API_KEY`。
 2. 把 [`codex/config.toml`](codex/config.toml) 的内容追加到 `~/.codex/config.toml`。
-3. 把 [`generic/skills`](generic/skills) 里的两个文件夹复制到 `~/.agents/skills/`（Windows 是 `C:\Users\你的用户名\.agents\skills\`），这是 Codex 的个人 Skill 目录。
+3. 把 [`generic/skills`](generic/skills) 里的全部文件夹复制到 `~/.agents/skills/`（Windows 是 `C:\Users\你的用户名\.agents\skills\`），这是 Codex 的个人 Skill 目录。
 
 ## Cursor
 
 1. 把 [`generic/mcp.json`](generic/mcp.json) 的内容放进 `~/.cursor/mcp.json`（所有项目可用），或项目里的 `.cursor/mcp.json`（只对这个项目），把 `YOUR_MCLOUD_API_KEY` 换成你的 key。
 2. 打开 Cursor 的 **Customize → MCPs**，点 mcloud。**放在项目里的配置默认是关闭的**，要把开关打开；看到绿点和"4 tools enabled"就好了。
-3. Cursor 会自动读取 `~/.claude/skills` 里的 Skill（`~/.codex/skills` 也会读），把 [`generic/skills`](generic/skills) 里的两个文件夹放进 `~/.claude/skills` 即可。
+3. Cursor 会自动读取 `~/.claude/skills` 里的 Skill（`~/.codex/skills` 也会读），把 [`generic/skills`](generic/skills) 里的全部文件夹放进 `~/.claude/skills` 即可。
 
 ## OpenClaw 等其他支持 MCP 的工具
 
 1. 在工具的 MCP 设置里导入 [`generic/mcp.json`](generic/mcp.json)，把里面的 `YOUR_MCLOUD_API_KEY` 换成你的 key。
-2. 如果工具支持 Skill，把 [`generic/skills`](generic/skills) 里的两个文件夹放进它的 skills 目录。
+2. 如果工具支持 Skill，把 [`generic/skills`](generic/skills) 里的全部文件夹放进它的 skills 目录。
 
 ## 试一下
 
