@@ -22,9 +22,10 @@ customer's cloud account at their reseller discount.
 3. **Present a short table**: model, cloud and platform, region, tier, input / output price
    per million tokens (list, discount %, final), and the monthly estimate when volumes were
    given. Repeat every entry in `notes`.
-   - `tier`: `regional` = processed in that region; `global` = may be routed to other
-     countries. Point this out whenever the cheapest option is global.
-   - Say when `price_source` is a hand-checked price, and when `price_stale` is true.
+   - `tier`: `regional` = processed in that region; `datazone` = stays within a
+     multi-country zone; `global` = may be routed to any country. Point this out whenever
+     the cheapest option is not regional.
+   - Mention `price_note` when present (e.g. tiered pricing), and say when `price_stale` is true.
 4. For a formal quote or to start buying, hand over to the account manager; model usage is
    not ordered through `request_purchase`.
 
