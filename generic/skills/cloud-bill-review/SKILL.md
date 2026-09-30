@@ -17,10 +17,12 @@ are fetched once a day, so the current month is incomplete. Default to last mont
    - If `status` is `no_billing_accounts`, repeat its `message` and stop. Do not guess figures.
 2. **Summarise the month** in a few lines:
    - Total (`total_usd`) and change versus the previous month (`change_pct`)
-   - What they saved against list price (`saved_vs_list_usd`)
+   - What they saved against list price (`saved_vs_list_usd`), only if above zero
    - Split by cloud (`by_provider`) and by billing mode (`by_pay_mode`)
    - The biggest products (`top_products`) and instances (`top_instances`)
-   - If `change_pct` is large, point to the products or instances that explain it.
+   - Explain the change with `biggest_changes` (product, last month, this month, change).
+   - If `status` is `month_in_progress`, say the month is not over (figures up to
+     `data_through`); if `not_final`, say last month's bill may still change slightly.
 3. **Call `list_savings`** for the same month when the user asks about saving money, or when
    on-demand spend is a large share of the total.
    - For each suggestion, show the instance, hours run, current monthly cost, estimated saving
